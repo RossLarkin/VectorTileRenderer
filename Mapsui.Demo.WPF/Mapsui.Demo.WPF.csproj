@@ -66,9 +66,6 @@
     <Reference Include="SkiaSharp.Views.Desktop, Version=1.60.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\SkiaSharp.Views.1.60.0\lib\net45\SkiaSharp.Views.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Views.Gtk, Version=1.60.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\SkiaSharp.Views.1.60.0\lib\net45\SkiaSharp.Views.Gtk.dll</HintPath>
-    </Reference>
     <Reference Include="SkiaSharp.Views.WPF, Version=1.60.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\SkiaSharp.Views.1.60.0\lib\net45\SkiaSharp.Views.WPF.dll</HintPath>
     </Reference>
