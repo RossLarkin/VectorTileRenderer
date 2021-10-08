@@ -25,6 +25,8 @@ namespace VectorTileRenderer.Sources
 
         public async Task<Stream> GetTile(int x, int y, int zoom)
         {
+            await Task.CompletedTask;  //RML Remove "This async method lacks 'await' operators and will run synchronously"
+
             var qualifiedPath = Path
                 .Replace("{x}", x.ToString())
                 .Replace("{y}", y.ToString())
@@ -93,6 +95,8 @@ namespace VectorTileRenderer.Sources
 
         private static async Task<VectorTile> baseTileToVector(object baseTile)
         {
+            await Task.CompletedTask;  //RML Remove "This async method lacks 'await' operators and will run synchronously"
+
             var tile = baseTile as Mapbox.VectorTile.VectorTile;
             var result = new VectorTile();
 

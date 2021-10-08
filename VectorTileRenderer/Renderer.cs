@@ -94,7 +94,8 @@ namespace VectorTileRenderer
                               }
                           }
                       }
-                      catch (Exception e)
+//x                      catch (Exception e)
+                      catch (Exception)
                       {
                           return;
                       }

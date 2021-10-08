@@ -261,7 +261,7 @@ namespace VectorTileRenderer
                 return token.ToObject<object>();
             }
 
-            return null;
+//x            return null;
         }
 
         public Brush[] GetStyleByType(string type, double zoom, double scale = 1)
@@ -691,7 +691,8 @@ namespace VectorTileRenderer
             {
                 return (Color)ColorConverter.ConvertFromString(colorString);
             }
-            catch (Exception e)
+//x            catch (Exception e)
+            catch (Exception)
             {
                 throw new NotImplementedException("Not implemented color format: " + colorString);
             }
@@ -855,7 +856,7 @@ namespace VectorTileRenderer
                     if (!(attributes[key] is IComparable))
                     {
                         throw new NotImplementedException("Comparing colors probably");
-                        return false;
+//x                        return false;
                     }
 
                     var valueA = (IComparable)attributes[key];

@@ -81,7 +81,8 @@ namespace VectorTileRenderer.Sources
                     }
                 }
             }
-            catch (Exception e)
+//x            catch (Exception e)
+            catch (Exception)
             {
                 throw new MemberAccessException("Could not load Mbtiles source file");
             }
@@ -184,7 +185,8 @@ namespace VectorTileRenderer.Sources
 
                 return actualTile;
 
-            } catch(Exception e)
+//x            } catch(Exception e)
+            } catch(Exception)
             {
                 return null;
             }
@@ -192,6 +194,8 @@ namespace VectorTileRenderer.Sources
 
         async Task<VectorTile> getCachedVectorTile(int x, int y, int zoom)
         {
+            await Task.CompletedTask;  //RML Remove "This async method lacks 'await' operators and will run synchronously"
+
             var key = x.ToString() + "," + y.ToString() + "," + zoom.ToString();
 
             lock(key)
@@ -215,6 +219,8 @@ namespace VectorTileRenderer.Sources
 
         async Task<Stream> ITileSource.GetTile(int x, int y, int zoom)
         {
+            await Task.CompletedTask;  //RML Remove "This async method lacks 'await' operators and will run synchronously"
+
             return GetRawTile(x, y, zoom);
         }
     }
