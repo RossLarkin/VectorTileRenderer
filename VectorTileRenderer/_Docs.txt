@@ -1,0 +1,11 @@
+DB Browser for SQLite
+	https://sqlitebrowser.org/
+
+	"C:\Maps\MapBundle\tiles.pmtiles"  Not Database  (https://protomaps.com/)
+	*.pbf.gz  Not Database
+	*.pbf     Not Database
+
+	"C:\github\VectorTileRenderer\tiles\islamabad.mbtiles"  Yes
+	"C:\github\VectorTileRenderer\tiles\zurich.mbtiles"     Yes
+
+https://github.com/AliFlux/VectorTileRenderer

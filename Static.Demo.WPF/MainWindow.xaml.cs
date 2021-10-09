@@ -86,7 +86,7 @@ namespace Demo.WPF
             showMbTiles(mainDir + @"tiles/islamabad.mbtiles", mainDir + @"styles/light-style.json", 1438, 1226, 1440, 1228, 11, 512);
         }
 
-        void guangzhouMbTilesAliFluxStyle()
+        void guangzhouMbTilesAliFluxStyle()  //RML Not used
         {
             //showMbTiles(mainDir + @"tiles/guangzhou.mbtiles", mainDir + @"styles/aliflux-style.json", 416, 288, 418, 290, 9, 512);
             showMbTiles(@"F:\AliData\C#\FlightMapper\FlightMapper\bin\Debug\tiles\asia.mbtiles", mainDir + @"styles/aliflux-style.json", 368, 311, 373, 313, 9, 512);
@@ -177,13 +177,15 @@ namespace Demo.WPF
 
         async void showMbTiles(string path, string stylePath, int minX, int minY, int maxX, int maxY, int zoom, double size = 512, double scale = 1)
         {
+            await Task.CompletedTask;  //RML Remove "This async method lacks 'await' operators and will run synchronously"
+
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
             // load style and font
             var style = new VectorTileRenderer.Style(stylePath);
             style.FontDirectory = mainDir + @"styles/fonts/";
 
-            // set pbf as tile provider
+            //RML set mb as tile provider
             var provider = new VectorTileRenderer.Sources.MbTilesSource(path);
             style.SetSourceProvider(0, provider);
 
